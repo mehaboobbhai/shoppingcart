@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS `products` ( 
+  `id_product` int(11) NOT NULL AUTO_INCREMENT, 
+  `name` varchar(100) NOT NULL, 
+  `description` varchar(250) NOT NULL, 
+  `price` decimal(6,2) NOT NULL, 
+  PRIMARY KEY (`id_product`) 
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ; 
+  
+INSERT INTO `products` (`id_product`, `name`, `description`, `price`) VALUES
+(1, 'pen', 'good writing', '18.00'), 
+(2, 'pen', 'good grip', '21.00'), 
+(3, 'pen', 'good life', '70.00'), 
+(4, 'pen', 'good life', '60.00'),
+(5, 'pen', 'good look', '55.00'), 
+(6, 'pen', 'slim', '54.00'), 
+(7, 'pen', 'good writing', '34.00'),
+(17, 'pen', 'good look', '55.00'), 
+(18, 'pen', 'slim', '54.00'), 
+(19, 'pen', 'good writing', '34.00'),
+(20, 'pen', 'good writing', '34.00');
+
+
+
+
+ String hql="from product";
+		 List<Product>list=sessionFactory.openSession().createQuery(hql).list();
+		 System.out.println(list);
